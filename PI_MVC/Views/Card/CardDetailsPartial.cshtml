@@ -1,0 +1,25 @@
+﻿@model WebGarden_PI.Model.Card
+
+@Html.Hidden("card", Model.Name, new {id="name"}) 
+<legend>Details</legend>
+    <div class="display-label">
+        Name:
+        @Html.DisplayFor(model => Model.Name)
+    </div>
+    <div class="display-label">
+        Description:
+        @Html.DisplayFor(model => Model.Description)
+    </div>
+
+    <div class="display-label">
+        BeginDate:
+        @Html.DisplayFor(model => Model.BeginDate)
+    </div>
+
+    <div class="display-label">
+        EndDate:
+        @Html.DisplayFor(model => Model.EndDate)
+    </div>
+   <p>
+    @Html.ActionLink("Voltar atrás", "Details", "Board", new { id =@ViewData["board"] }, null)
+   </p>
